@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("rest/products")
+@RequestMapping("graphql/product")
 public class ProductResource {
     @Autowired
     GraphQLService graphqlService;

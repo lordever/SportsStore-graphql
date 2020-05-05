@@ -3,24 +3,24 @@ package com.example.greeting.controller;
 import com.example.greeting.jpaModel.JpaSalesOrder;
 import com.example.greeting.model.SalesOrder;
 import com.example.greeting.repository.CartRepository;
-import com.example.greeting.repository.OrderRepository;
+import com.example.greeting.repository.SalesOrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/order")
-public class OrderController {
+public class SalesOrderController {
 
     @Autowired
-    private OrderRepository orderRepository;
+    private SalesOrderRepository salesOrderRepository;
 
     @Autowired
     private CartRepository cartRepository;
 
     @GetMapping
     public Iterable<JpaSalesOrder> orders() {
-        return orderRepository.findAll();
+        return salesOrderRepository.findAll();
     }
 
     @PostMapping
@@ -41,6 +41,6 @@ public class OrderController {
                 order.getCountry(),
                 order.getCart()
         );
-        orderRepository.save(jpaSalesOrder);
+        salesOrderRepository.save(jpaSalesOrder);
     }
 }

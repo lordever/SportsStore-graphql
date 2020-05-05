@@ -9,7 +9,9 @@ import {HttpModule} from "@angular/http";
 import {AuthService} from "./services/auth.service";
 
 @NgModule({
-  imports: [HttpModule],
+  imports: [
+    HttpModule
+  ],
   providers: [StaticDataSource, ProductRepository, CartService,
     OrderService, OrderRepository,
     {provide: StaticDataSource, useClass: RestDatasource},

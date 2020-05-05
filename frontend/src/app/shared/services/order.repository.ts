@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {OrderService, Order} from "../model/order.service";
+import {Order} from "../model/order.service";
 import {Observable} from "rxjs/Observable";
 import {RestDatasource} from "./rest.datasource";
 

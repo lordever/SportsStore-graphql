@@ -10,7 +10,9 @@ import {StoreFirstGuard} from "./storeFirst.guard";
 
 
 @NgModule({
-  imports: [BrowserModule, StoreModule,
+  imports: [
+    BrowserModule,
+    StoreModule,
     RouterModule.forRoot([
       {
         path: "store", component: StoreComponent,
